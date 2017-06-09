@@ -5,7 +5,7 @@
       <span>
         Name <span class="k-required">*</span>
       </span>
-      <input class="k-textbox" placeholder="Full Name"
+      <input class="k-textbox" placeholder="John Smith"
              [(ngModel)]="formModel.name" name="name" required
              #name="ngModel" #spy/>
       <div class="validationError" [hidden]="name.valid || name.pristine">Please provide your full name</div>
@@ -37,7 +37,7 @@
       <span>
         Street Address <span class="k-required">*</span>
       </span>
-      <input class="k-textbox" placeholder="Address"
+      <input class="k-textbox" placeholder="123 Sample Street"
              [(ngModel)]="formModel.address" name="address"
              #address="ngModel" required />
       <div class="validationError" [hidden]="address.valid || address.pristine">Please provide your Street Address</div>
@@ -46,7 +46,7 @@
       <span>
         Zipcode <span class="k-required">*</span>
       </span>
-      <input class="k-textbox" placeholder="ZipCode"
+      <input class="k-textbox" placeholder="01234"
              [(ngModel)]="formModel.zipcode" name="zipcode"
              #zipcode="ngModel" required />
       <div class="validationError" [hidden]="zipcode.valid || zipcode.pristine">Please provide your Zipcode</div>
