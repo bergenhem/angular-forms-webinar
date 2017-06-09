@@ -1,4 +1,43 @@
-<h1>
-  {{title}}
-</h1>
-<kendo-datepicker></kendo-datepicker>
+<form class="k-form">
+  <fieldset>
+    <legend>Personal Information</legend>
+    <label class="k-form-field">
+      <span>Name</span>
+      <input class="k-textbox" placeholder="Full Name" />
+    </label>
+    <label class="k-form-field">
+      <span>Gender</span>
+      <input type="radio" name="gender" id="female" class="k-radio">
+      <label class="k-radio-label" for="female">Female</label>
+      <input type="radio" name="gender" id="male" class="k-radio">
+      <label class="k-radio-label" for="male">Male</label>
+    </label>
+    <label class="k-form-field">
+      <span>Date of Birth</span>
+      <kendo-datepicker></kendo-datepicker>
+    </label>
+  </fieldset>
+  <fieldset>
+    <legend>Address</legend>
+    <label class="k-form-field">
+      <span>Street Address</span>
+      <input class="k-textbox" placeholder="Address" />
+    </label>
+    <label class="k-form-field">
+      <span>Zipcode</span>
+      <input class="k-textbox" placeholder="ZipCode" />
+    </label>
+    <label class="k-form-field">
+      <input type="checkbox" id="billingCheck" class="k-checkbox" checked="checked">
+      <label class="k-checkbox-label" for="billingCheck">Billing Address is the same as Shipping</label>
+    </label>
+  </fieldset>
+  <fieldset>
+    <legend>Misc</legend>
+    <label class="k-form-field">
+      <span>Sign me up for the newsletter!</span>
+      <kendo-switch></kendo-switch>
+    </label>
+  </fieldset>
+  <button>Sign up!</button>
+</form>
