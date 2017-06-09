@@ -1,26 +1,34 @@
-<form class="k-form">
+<form class="k-form" #userForm="ngForm" (ngSubmit)="onSubmit()">
   <fieldset>
     <legend>Personal Information</legend>
     <label class="k-form-field">
       <span>
         Name <span class="k-required">*</span>
       </span>
-      <input class="k-textbox" placeholder="Full Name" required />
+      <input class="k-textbox" placeholder="Full Name"
+             [(ngModel)]="formModel.name" name="name" required
+             #name="ngModel" #spy/>
+      <div class="validationError" [hidden]="name.valid || name.pristine">Please provide your full name</div>
+      <br>TODO: remove this: {{spy.className}}
     </label>
     <label class="k-form-field">
       <span>
         Gender<span class="k-field-info">(optional)</span>
       </span>
-      <input type="radio" name="gender" id="female" class="k-radio">
+      <input type="radio" name="gender" id="female" class="k-radio"
+             value="female" [(ngModel)]="formModel.gender">
       <label class="k-radio-label" for="female">Female</label>
-      <input type="radio" name="gender" id="male" class="k-radio">
+      <input type="radio" name="gender" id="male" class="k-radio"
+             value="male" [(ngModel)]="formModel.gender">
       <label class="k-radio-label" for="male">Male</label>
     </label>
     <label class="k-form-field">
       <span>
         Date of Birth <span class="k-required">*</span>
       </span>
-      <kendo-datepicker required></kendo-datepicker>
+      <kendo-datepicker [(ngModel)]="formModel.dateOfBirth" name="dateOfBirth"
+                        #dateOfBirth="ngModel" required ></kendo-datepicker>
+      <div class="validationError" [hidden]="dateOfBirth.valid || dateOfBirth.pristine">Please provide your Date of Birth</div>
     </label>
   </fieldset>
   <fieldset>
@@ -29,13 +37,19 @@
       <span>
         Street Address <span class="k-required">*</span>
       </span>
-      <input class="k-textbox" placeholder="Address" required />
+      <input class="k-textbox" placeholder="Address"
+             [(ngModel)]="formModel.address" name="address"
+             #address="ngModel" required />
+      <div class="validationError" [hidden]="address.valid || address.pristine">Please provide your Street Address</div>
     </label>
     <label class="k-form-field">
       <span>
         Zipcode <span class="k-required">*</span>
       </span>
-      <input class="k-textbox" placeholder="ZipCode" required />
+      <input class="k-textbox" placeholder="ZipCode"
+             [(ngModel)]="formModel.zipcode" name="zipcode"
+             #zipcode="ngModel" required />
+      <div class="validationError" [hidden]="zipcode.valid || zipcode.pristine">Please provide your Zipcode</div>
     </label>
     <label class="k-form-field">
       <input type="checkbox" id="billingCheck" class="k-checkbox" checked="checked">
@@ -48,9 +62,10 @@
       <span>
         Sign me up for the newsletter!<span class="k-field-info">(optional)</span>
       </span>
-      <kendo-switch></kendo-switch>
+      <kendo-switch [(ngModel)]="formModel.newsletter" name="newsletter"></kendo-switch>
     </label>
   </fieldset>
-  <button type="submit" kendoButton [primary]="true">Create Account</button>
+  <button type="submit" kendoButton
+          [primary]="true" [disabled]="!userForm.form.valid">Create Account</button>
   <button kendoButton>Cancel</button>
 </form>
