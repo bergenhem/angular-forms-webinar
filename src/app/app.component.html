@@ -5,7 +5,7 @@
       <span>
         Name <span class="k-required">*</span>
       </span>
-      <input class="k-textbox" placeholder="Full Name" />
+      <input class="k-textbox" placeholder="Full Name" required />
     </label>
     <label class="k-form-field">
       <span>
@@ -20,7 +20,7 @@
       <span>
         Date of Birth <span class="k-required">*</span>
       </span>
-      <kendo-datepicker></kendo-datepicker>
+      <kendo-datepicker required></kendo-datepicker>
     </label>
   </fieldset>
   <fieldset>
@@ -29,13 +29,13 @@
       <span>
         Street Address <span class="k-required">*</span>
       </span>
-      <input class="k-textbox" placeholder="Address" />
+      <input class="k-textbox" placeholder="Address" required />
     </label>
     <label class="k-form-field">
       <span>
         Zipcode <span class="k-required">*</span>
       </span>
-      <input class="k-textbox" placeholder="ZipCode" />
+      <input class="k-textbox" placeholder="ZipCode" required />
     </label>
     <label class="k-form-field">
       <input type="checkbox" id="billingCheck" class="k-checkbox" checked="checked">
@@ -51,6 +51,6 @@
       <kendo-switch></kendo-switch>
     </label>
   </fieldset>
-  <button kendoButton [primary]="true">Create Account</button>
+  <button type="submit" kendoButton [primary]="true">Create Account</button>
   <button kendoButton>Cancel</button>
 </form>
