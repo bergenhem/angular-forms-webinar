@@ -18,7 +18,9 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    DateInputsModule
+    DateInputsModule,
+    InputsModule,
+    LabelModule
   ],
   providers: [],
   bootstrap: [AppComponent]
