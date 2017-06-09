@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DatePickerModule } from '@progress/kendo-angular-dateinputs';
 
 @Component({
   selector: 'app-root',
