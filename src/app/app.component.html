@@ -2,29 +2,39 @@
   <fieldset>
     <legend>Personal Information</legend>
     <label class="k-form-field">
-      <span>Name</span>
+      <span>
+        Name <span class="k-required">*</span>
+      </span>
       <input class="k-textbox" placeholder="Full Name" />
     </label>
     <label class="k-form-field">
-      <span>Gender</span>
+      <span>
+        Gender<span class="k-field-info">(optional)</span>
+      </span>
       <input type="radio" name="gender" id="female" class="k-radio">
       <label class="k-radio-label" for="female">Female</label>
       <input type="radio" name="gender" id="male" class="k-radio">
       <label class="k-radio-label" for="male">Male</label>
     </label>
     <label class="k-form-field">
-      <span>Date of Birth</span>
+      <span>
+        Date of Birth <span class="k-required">*</span>
+      </span>
       <kendo-datepicker></kendo-datepicker>
     </label>
   </fieldset>
   <fieldset>
     <legend>Address</legend>
     <label class="k-form-field">
-      <span>Street Address</span>
+      <span>
+        Street Address <span class="k-required">*</span>
+      </span>
       <input class="k-textbox" placeholder="Address" />
     </label>
     <label class="k-form-field">
-      <span>Zipcode</span>
+      <span>
+        Zipcode <span class="k-required">*</span>
+      </span>
       <input class="k-textbox" placeholder="ZipCode" />
     </label>
     <label class="k-form-field">
@@ -35,9 +45,12 @@
   <fieldset>
     <legend>Misc</legend>
     <label class="k-form-field">
-      <span>Sign me up for the newsletter!</span>
+      <span>
+        Sign me up for the newsletter!<span class="k-field-info">(optional)</span>
+      </span>
       <kendo-switch></kendo-switch>
     </label>
   </fieldset>
-  <button>Sign up!</button>
+  <button kendoButton [primary]="true">Create Account</button>
+  <button kendoButton>Cancel</button>
 </form>
