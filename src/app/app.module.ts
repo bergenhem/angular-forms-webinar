@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { InputsModule } from '@progress/kendo-angular-inputs';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { LabelModule } from '@progress/kendo-angular-label';
 
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { AppComponent } from './app.component';
     HttpModule,
     DateInputsModule,
     InputsModule,
+    ButtonsModule,
     LabelModule
   ],
   providers: [],
