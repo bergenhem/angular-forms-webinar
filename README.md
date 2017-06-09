@@ -1,10 +1,6 @@
 # Building User-Friendly Forms with Angular
 ---
 Final project for the "Building User-Friendly Forms with Angular" webinar.
-# Building User-Friendly Forms with Angular
----
-Final project for the "Building User-Friendly Forms with Angular" webinar.
-
 
 ### Prerequisites
 - NodeJS (https://nodejs.org/en/)
